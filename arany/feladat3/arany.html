@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <title>Arányosság</title>
+  <link rel="icon" type="image/x-icon" href="../../imgs/robi.ico">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://kit.fontawesome.com/c5dc45d9b7.js" crossorigin="anonymous"></script>
+  <script>
+    function checking() {
+        var inputA = document.getElementById("inputA").value.trim(); 
+        var inputB = document.getElementById("inputB").value.trim(); 
+
+        if (inputA === "400 : 50" || inputA === "400:50") {
+            document.getElementById("InputBox1i").style.backgroundColor = "green"; 
+        } else {
+            document.getElementById("InputBox1i").style.backgroundColor = "red";
+        }
+
+		if (inputB === "50 : 450" || inputB === "50:450") {
+            document.getElementById("InputBox2i").style.backgroundColor = "green";
+        } else {
+            document.getElementById("InputBox2i").style.backgroundColor = "red";
+        }
+    }
+
+	function solution() {
+    var Solution = document.getElementById("solution");
+
+    var currentVisibility = Solution.style.visibility;
+
+    if (currentVisibility === "hidden") {
+        Solution.style.visibility = "visible";
+    } else {
+        Solution.style.visibility = "hidden";
+    }
+}
+	
+</script>
+</head>
+<body>
+	<nav class="navbar">
+		<ul>
+			<li class="egyes"><a href="../../arany/feladat1/arany.html">Arány</a></li>
+			<li class="kettes"><a href="../../aranyossag/feladat1/aranyossag.html">Arányosság</a></li>
+			<li class="hármas"><a href="../../egyenesaranyossag/feladat1/egyenesaranyossag.html">Egyenes Arányosság</a></li>
+		  	<li class="négyes"><a href="../../forditottaranyossag/feladat1/forditottaranyossag.html">Fordított Arányosság</a></li>
+		</ul>
+	</nav>
+	<nav class="navbarFeladatok">
+		<ul>
+			<li class="feladatEgyes"><a href="../feladat1/arany.html">1. Feladat</a></li>
+			<li class="feladatKettes"><a href="../feladat2/arany.html">2. Feladat</a></li>
+			<li class="feladatHarmas"><a href="../feladat3/arany.html">3. Feladat</a></li>
+		</ul>
+	</nav>
+	<div class="fogalom">
+		<a><i class="fa-solid fa-exclamation"></i></a>
+		<p>Az arány két szám egymáshoz való viszonyát fejezi ki.</p>
+	</div>
+	<div class="homepage">
+		<a href="../../index.html"><i class="fa-solid fa-house"></i></a>
+	</div>
+	<div class="feladat1">
+		<h1>3. Feladat</h1>
+		<p class="szoveg1">Egy kosárban van 50 db eper és 400 db cseresznye.</p>
+		<br>
+		<p class="kerdes1a">a) Mi az arány a cseresznye és az eper között?</p>
+		<p class="kerdes1b">b) Mi az arány az eper és az összes gyümölcs között?</p>
+		<div class="auth">
+			<div class="login" id="login">
+					<div class="InputBox">
+						<input id="inputA" type="text" required="required">
+                		<span>A Feladat Megoldása</span>
+                		<i id="InputBox1i"></i>
+					</div>
+					<div class="InputBox2">
+						<input id="inputB" type="text" required="required">
+						<span>B Feladat Megoldása</span>
+						<i id="InputBox2i"></i>
+					</div>
+					<input onclick="checking()" type="submit" value="Ellenőrzés" class="ellen">
+					<input onclick="solution()" type="submit" value="Megoldás" class="megoldasButton">
+			</div>
+		</div>
+		<div class="solutionDiv" id="solution">
+			<h1>Megoldás</h1>
+			<div class="aFeladat">
+				<h2>
+					a)
+				</h2>
+				<p>
+					A cseresznyék darab száma 400,
+				</p>
+				<p>
+					és az eperé 50 darab.
+				</p>
+				<p>
+					Tehát az arány a cseresznye és az eper között:
+				</p>
+				<p>
+					Cseresznye : Eper = 400 : 50
+				</p>
+			</div>
+			<div class="bFeladat">
+				<h2>
+					b)
+				</h2>
+				<p>
+					Az eprek darab száma 50,
+				</p>
+				<p>
+					az összes mennyiség az eper és a cseresznye
+				</p>
+				<p>
+					összege, ami 50 + 400 = 450 darab.
+				</p>
+				<p>
+					Tehát az arány az eper és az összes gyümölcs között:
+				</p>
+				<p>
+					Eper : Összes = 50 : 450
+				</p>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	    
+</body>
+</html>
